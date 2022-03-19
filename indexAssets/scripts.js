@@ -1,3 +1,4 @@
+alert("Para melhor funcionamento utiliza o navegador Google Chrome")
 let elementosHtml = {
     react:{
         botaoMais: document.getElementsByClassName("botaoMais")[0],
