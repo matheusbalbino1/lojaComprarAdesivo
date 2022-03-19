@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/img/android-chrome-512x512.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="indexAssets/img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="indexAssets/style.css">
     <title>Comprar Adesivos</title>
 </head>
 
 <body>
     <main class="main">
         <header class="header">
-            <h1 class="headerH1">Formulário para comprar<br><strong>Pacotes de Adesivos</strong></h1>
-            <div class="headerDiv"><img src="assets/img/adesivo.png" alt="Adesivo" class="headerDivImg"></div>
+        <div class="headerPrimeiro">
+            <span>Comprar Pacotes</span>
+            <div class="headerPonta"></div>
+        </div>
+        <div class="headerSegundo">
+            <span>Finalizar Pagamento</span>
+        </div>
+    </div>
         </header>
         <article class="article">
             <form action="" class="form">
@@ -57,7 +63,7 @@
                         </div>
                     </div>
                     <div class="formDivTotal">
-                        <label class="labelQuantia">Total R$</label>
+                        <label class="labelQuantia">Total: R$</label>
                         <input type="number" id="angularInput" placeholder="0" class="inputTotal" value="0">
                     </div>
                 </div>
@@ -69,11 +75,10 @@
                 <div class="divEnviar">
                     <button class="botaoEnviar" type="submit">Próximo</button>
                 </div>
-
             </form>
         </article>
     </main>
-    <script src="assets/scripts.js"></script>
+    <script src="indexAssets/scripts.js"></script>
 </body>
 
 </html>

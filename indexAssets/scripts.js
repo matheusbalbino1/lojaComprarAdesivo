@@ -27,6 +27,7 @@ elementosHtml.vue.botaoMenos.addEventListener("click", ()=>{somarDiminuir("vue",
 
 document.getElementsByClassName("botaoEnviar")[0]. addEventListener("click",()=>{
     event.preventDefault();
+    window.location.href = "../pagamentos.html";
 })
 
 function total (){

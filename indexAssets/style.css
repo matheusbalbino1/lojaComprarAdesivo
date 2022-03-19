@@ -18,38 +18,58 @@ body {
 
 .main {
     background: #fff;
-    height: 97%;
+    height: 100%;
     width: 50%;
-    border-radius: 20px;
     box-shadow: 2px 2px 25px black;
+    padding-top: 5px;
 }
 
 .header {
+    /* background: rgb(25, 25, 122); */
+    display: flex;
+    /* justify-content: center;
+    align-items: center;  */
+    box-shadow: 0px 0px 5px black;
+    height: 40px;
+    width: 100%;
+}
+
+.headerPrimeiro {
+    width: 50%;
+    height: 40px;
     background: rgb(25, 25, 122);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 2rem 1.5rem 0 1.5rem;
-    border-radius: 20px 20px 200px 0px;
+    justify-content: center;
+    position: relative;
 }
 
-.headerH1 {
+.headerPrimeiro span {
     color: white;
-    font-weight: 400;
-    width: 60%;
-    font-size: 1.5rem;
+    font-weight: 700;
     letter-spacing: 2px;
+    font-size: 1rem;
+    margin-left: 2%;
 }
 
-.headerDiv {
-    max-width: 200px;
-    width: 40%;
-    background: rgb(255, 255, 255);
-    border-radius: 100px;
+.headerSegundo {
+    width: 50%;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
 }
 
-.headerDivImg {
-    width: 100%;
+.headerPonta {
+    height: 28px;
+    width: 28px;
+    transform: rotate(135deg);
+    background-image: linear-gradient(135deg, rgb(25, 25, 122) 50%, transparent 50%);
+    position: absolute;
+    right: -13px;
+    top: 6px;
 }
 
 .article {
@@ -73,12 +93,14 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.formPreco{
-    display:flex;
+
+.formPreco {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.formDivTotal{
+
+.formDivTotal {
     margin: 10px 30px;
     display: flex;
     justify-content: end;
@@ -160,25 +182,37 @@ body {
     border-radius: 5px;
 }
 
-@media(max-width:550px) {
+@media(max-width:800px) {
     .main {
         margin: 0;
         width: 100%;
         height: 100vh;
-    }
-
-    .headerDiv {
-        display: none;
-    }
-
-    .header {
         border-radius: 0;
-        justify-content: center;
-        padding: 1rem;
     }
 
-    .headerH1 {
+    .headerPrimeiro span {
+        font-size: 0.8rem;
+        margin-left: 2%;
+    }
+
+    .headerSegundo {
+        width: 50%;
+        height: 40px;
+        padding-right: 2px;
+    }
+}
+
+@media(max-width:370px) {
+    .formDivsAdesivos {
         width: 100%;
-        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .formPreco {
+        width: 100%;
+    }
+
+    .headerSegundo span {
+        font-size: 13px;
     }
 }

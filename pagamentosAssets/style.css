@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100%;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 30px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.main {
+    background: #fff;
+    min-height: 100vh;
+    width: 50%;
+    box-shadow: 2px 2px 25px black;
+    padding: 5px 0 0 0;
+}
+
+.header {
+    display: flex;
+    box-shadow: 0px 0px 5px black;
+    height: 40px;
+    width: 100%;
+}
+
+.headerPrimeiro {
+    width: 50%;
+    height: 40px;
+    background: rgb(25, 25, 122);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.headerPrimeiro span {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: 2%;
+}
+
+.headerPonta {
+    height: 28px;
+    width: 28px;
+    transform: rotate(135deg);
+    background-image: linear-gradient(135deg, rgb(25, 25, 122) 50%, transparent 50%);
+    position: absolute;
+    right: -13px;
+    top: 6px;
+}
+
+.headerSegundo {
+    width: 50%;
+    height: 40px;
+    background: rgb(110, 110, 187);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.article {
+    padding: 15px;
+    background:#fff;
+}
+
+.entrega {
+    margin-top: 20px;
+}
+
+.entregaDivs {
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entregaDivs input {
+    margin: 10px 0;
+}
+
+.pagamento {
+    margin-top: 20px;
+}
+
+.pagamentoLabel {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 0;
+}
+
+.pagamentoLabel input {
+    margin: 0 20px 0 0;
+}
+
+.divDadosCartao {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dadosCartao {
+    margin-top: 15px;
+    width: 45%;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input:focus-within {
+    border: 3px solid rgb(25, 25, 122);
+}
+
+.botaoImprimir, #botaoCep, .botaoFinalizar {
+    display: flex;
+    width: 130px;
+    padding: 10px;
+    background-color: rgb(25, 25, 122);
+    border: none;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+
+.botaoImprimir {
+    width: 110px;
+}
+
+.botaoImprimir::after {
+    content: "🖨️";
+
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.divFinalizar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.botaoFinalizar {
+    background: rgb(255, 163, 42);
+    width: 100px;
+}
+@media(max-width:800px) {
+    .main {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+   
+    .headerPrimeiro span, .headerSegundo span{
+        font-size: 13px;
+        width:100px;
+    }
+}
+@media(max-width:375px) {
+    .headerPrimeiro span, .headerSegundo span{
+        font-size: 13px;
+        width:100px;
+    }
+    .entregaDivs{
+        flex-wrap: wrap;
+    }
+    input[type="text"], .entregaDivs input{
+        width:100%;
+    }
+}
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagamentosAssets/style.css">
+    <link rel="shortcut icon" href="indexAssets/img/favicon-16x16.png" type="image/x-icon">
+    <title>Finalizar Pagamentos</title>
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <div class="headerPrimeiro">
+                <span>Comprar Pacotes</span>
+                <div class="headerPonta"></div>
+            </div>
+            <div class="headerSegundo">
+                <span>Finalizar Pagamento</span>
+            </div>
+            </div>
+        </header>
+        <article class="article">
+            <div>
+                <form action="">
+                    <div class="entrega">
+                        <h2>DADOS DE ENTREGA</h2>
+                        <div class="entregaDivs">
+                            <label for="">Estado:</label>
+                            <input type="text" placeholder="Ex: São Paulo">
+                        </div>
+                        <div class="entregaDivs">
+                            <label for="">Cidade:</label>
+                            <input type="text" placeholder="Ex: São Paulo">
+                        </div>
+                        <div class="entregaDivs">
+                            <label for="">CEP:</label>
+                            <input type="text" id="inputCep" placeholder="8 números sem traço">
+                        </div>
+                        <div class="entregaDivs">
+                            <div></div>
+                            <button type="button" id="botaoCep">Conferir CEP</button>
+                        </div>
+                        <div class="entregaDivs">
+                            <label for="">Endereço:</label>
+                            <input type="text" placeholder="Ex: Avenida Paulista">
+                        </div>
+                        <div class="entregaDivs">
+                            <label for="">Número:</label>
+                            <input type="text" placeholder="Ex: 24B">
+                        </div>
+                    </div>
+                    <div class="pagamento">
+                        <h2>FORMAS DE PAGAMENTO</h2>
+                        <div class="pagamentoCartaoCredito">
+                            <label class="pagamentoLabel"><input type="radio" name="pagamento">Cartão de crédito</label>
+                            <div class="divDadosCartao">
+                                <input type="text" placeholder="NÚMERO DO CARTÃO" class="dadosCartao">
+                                <input type="text" placeholder="NOME NO CARTÃO" class="dadosCartao">
+                                <input type="text" placeholder="CÓDIGO CCV" class="dadosCartao">
+                            </div>
+                        </div>
+                        <div class="pagamentoBoleto">
+                            <label class="pagamentoLabel"><input type="radio" name="pagamento">Boleto bancário</label>
+                            <div><button class="botaoImprimir">IMPRIMIR</button></div>
+                        </div>
+                    </div>
+                    <div class="divFinalizar">
+                        <button type="submit" class="botaoFinalizar">FINALIZAR</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+    </main>
+    <script src="pagamentosAssets/scripts.js"></script>
+</body>
+
+</html>
