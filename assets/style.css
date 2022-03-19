@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background: #fff;
+    height: 97%;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 25px black;
+}
+
+.header {
+    background: rgb(25, 25, 122);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem 0 1.5rem;
+    border-radius: 20px 20px 200px 0px;
+}
+
+.headerH1 {
+    color: white;
+    font-weight: 400;
+    width: 60%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.headerDiv {
+    max-width: 200px;
+    width: 40%;
+    background: rgb(255, 255, 255);
+    border-radius: 100px;
+}
+
+.headerDivImg {
+    width: 100%;
+}
+
+.article {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.formH2 {
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.formAdesivos {
+    margin-top: 30px;
+}
+
+.formDivsAdesivos {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formPreco{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formDivTotal{
+    margin: 10px 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.divBotoes {
+    display: flex;
+    align-items: center;
+}
+
+.labelQuantia {
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-right: 8px;
+}
+
+.inputQuantia, .inputTotal {
+    width: 70px;
+    height: 30px;
+    margin: 0 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.inputQuantia::-webkit-outer-spin-button, .inputQuantia::-webkit-inner-spin-button, .inputTotal::-webkit-inner-spin-button, .inputTotal::-webkit-outer-spin-button {
+    display: none;
+}
+
+.botaoQuantia {
+    background-color: rgb(25, 25, 122);
+    color: white;
+    font-size: 2rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+}
+
+.botaoQuantia:active, .botaoEnviar:active {
+    transform: scale(0.9);
+}
+
+.labelObservacoes {
+    margin-top: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    display: block;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    resize: none;
+}
+
+.textarea:focus-within, .inputQuantia:focus-within, .inputTotal:focus-within {
+    border: 3px solid rgb(25, 25, 122);
+}
+
+.divEnviar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.botaoEnviar {
+    width: 90px;
+    padding: 10px;
+    background-color: rgb(25, 25, 122);
+    border: none;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+@media(max-width:550px) {
+    .main {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .headerDiv {
+        display: none;
+    }
+
+    .header {
+        border-radius: 0;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .headerH1 {
+        width: 100%;
+        text-align: center;
+    }
+}

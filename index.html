@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Comprar Adesivos</title>
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <h1 class="headerH1">Formulário para comprar<br><strong>Pacotes de Adesivos</strong></h1>
+            <div class="headerDiv"><img src="assets/img/adesivo.png" alt="Adesivo" class="headerDivImg"></div>
+        </header>
+        <article class="article">
+            <form action="" class="form">
+                <h2 class="formH2">Tipos de adesivos:</h2>
+                <div class="formAdesivos">
+                    <div class="formDivsAdesivos">
+                        <div class="formPreco">
+                            <span>React</span>
+                            <span><pre>       R$ 9,00</pre></span>
+                        </div>
+                        <div class="divBotoes">
+                            <label class="labelQuantia">Qtd:</label>
+                            <button type="button" class="botaoQuantia botaoMais">+</button>
+                            <input type="number" name="" id="reactInput" placeholder="0" class="inputQuantia" value="0">
+                            <button type="button" class="botaoQuantia botaoMenos">-</button>
+                        </div>
+                    </div>
+                    <div class="formDivsAdesivos">
+                        <div class="formPreco">
+                        <span>Vue</span>
+                        <span><pre>           R$ 6,00</pre></span>
+                    </div>
+                        <div class="divBotoes">
+                            <label class="labelQuantia">Qtd:</label>
+                            <button type="button" class="botaoQuantia botaoMais">+</button>
+                            <input type="number" id="vueInput" placeholder="0" class="inputQuantia" value="0">
+                            <button type="button" class="botaoQuantia botaoMenos">-</button>
+                        </div>
+                    </div>
+                    <div class="formDivsAdesivos">
+                        <div class="formPreco">
+                        <span>Angular</span>
+                        <span><pre>    R$ 5,55</pre></span>
+                    </div>
+                        <div class="divBotoes">
+                            <label class="labelQuantia">Qtd:</label>
+                            <button type="button" class="botaoQuantia botaoMais">+</button>
+                            <input type="number" id="angularInput" placeholder="0" class="inputQuantia" value="0">
+                            <button type="button" class="botaoQuantia botaoMenos">-</button>
+                        </div>
+                    </div>
+                    <div class="formDivTotal">
+                        <label class="labelQuantia">Total R$</label>
+                        <input type="number" id="angularInput" placeholder="0" class="inputTotal" value="0">
+                    </div>
+                </div>
+                </div>
+                <div>
+                    <label class="labelObservacoes">Observações:</label>
+                    <textarea cols="30" rows="5" placeholder="Alguma dúvida ou recado?" class="textarea"></textarea>
+                </div>
+                <div class="divEnviar">
+                    <button class="botaoEnviar" type="submit">Próximo</button>
+                </div>
+
+            </form>
+        </article>
+    </main>
+    <script src="assets/scripts.js"></script>
+</body>
+
+</html>
