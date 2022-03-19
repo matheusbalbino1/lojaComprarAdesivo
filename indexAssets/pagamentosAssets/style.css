@@ -186,8 +186,5 @@ button:active {
     .entregaDivs{
         flex-wrap: wrap;
     }
-    input[type="text"], .entregaDivs input{
-        width:100%;
-    }
 }
 
