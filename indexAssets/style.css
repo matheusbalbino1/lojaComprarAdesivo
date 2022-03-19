@@ -18,12 +18,22 @@ body {
 
 .main {
     background: #fff;
-    height: 100%;
+    min-height: 100%;
     width: 50%;
     box-shadow: 2px 2px 25px black;
     padding-top: 5px;
+    z-index: 1;
+    
 }
 
+.esconder{
+    position:absolute;
+    top:0;
+    right:50;
+    left:50;
+    z-index: 0;
+    margin-top:-100%;
+}
 .header {
     /* background: rgb(25, 25, 122); */
     display: flex;
@@ -63,6 +73,15 @@ body {
 }
 
 .headerPonta {
+    height: 28px;
+    width: 28px;
+    transform: rotate(135deg);
+    background-image: linear-gradient(135deg, rgb(25, 25, 122) 50%, transparent 50%);
+    position: absolute;
+    right: -13px;
+    top: 6px;
+}
+.pag2headerPonta{
     height: 28px;
     width: 28px;
     transform: rotate(135deg);

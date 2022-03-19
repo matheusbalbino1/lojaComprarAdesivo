@@ -7,37 +7,37 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    width: 100vw;
-    min-height: 100%;
-    background:rgb(176, 5, 255);;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-input {
+.input {
     height: 30px;
     padding-left: 10px;
     font-size: 1.2rem;
 }
 
-.main {
+.pag2main {
     background: #fff;
     min-height: 100vh;
     width: 50%;
     box-shadow: 2px 2px 25px black;
-    padding: 5px 0 0 0;
+    padding: 60px 0 0 0;
+    z-index: 1;
+    
+}
+.esconder{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    margin-top:-200%;
 }
 
-.header {
+.pag2header {
     display: flex;
     box-shadow: 0px 0px 5px black;
     height: 40px;
     width: 100%;
 }
 
-.headerPrimeiro {
+.pag2headerPrimeiro {
     width: 50%;
     height: 40px;
     background: rgb(25, 25, 122);
@@ -47,24 +47,16 @@ input {
     position: relative;
 }
 
-.headerPrimeiro span {
+.pag2headerPrimeiro span {
     color: white;
     font-weight: 700;
     letter-spacing: 2px;
     margin-left: 2%;
 }
 
-.headerPonta {
-    height: 28px;
-    width: 28px;
-    transform: rotate(135deg);
-    background-image: linear-gradient(135deg, rgb(25, 25, 122) 50%, transparent 50%);
-    position: absolute;
-    right: -13px;
-    top: 6px;
-}
 
-.headerSegundo {
+
+.pag2headerSegundo {
     width: 50%;
     height: 40px;
     background: rgb(110, 110, 187);
@@ -77,47 +69,47 @@ input {
     letter-spacing: 2px;
 }
 
-.article {
+.pag2article {
     padding: 15px;
     background:#fff;
 }
 
-.entrega {
+.pag2entrega {
     margin-top: 20px;
 }
 
-.entregaDivs {
+.pag2entregaDivs {
     max-width: 350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.entregaDivs input {
+.pag2entregaDivs input {
     margin: 10px 0;
 }
 
-.pagamento {
+.pag2pagamento {
     margin-top: 20px;
 }
 
-.pagamentoLabel {
+.pag2pagamentoLabel {
     display: flex;
     align-items: center;
     margin: 20px 0 0 0;
 }
 
-.pagamentoLabel input {
+.pag2pagamentoLabel input {
     margin: 0 20px 0 0;
 }
 
-.divDadosCartao {
+.pag2divDadosCartao {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.dadosCartao {
+.pag2dadosCartao {
     margin-top: 15px;
     width: 45%;
 }
@@ -155,9 +147,11 @@ button:active {
     transform: scale(0.9);
 }
 
-.divFinalizar {
+.pag2divFinalizar {
+    margin-top:15px;
     display: flex;
-    justify-content: end;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -166,36 +160,31 @@ button:active {
     width: 100px;
 }
 @media(max-width:800px) {
-    .main {
-        margin: 0;
+    .pag2main {
         width: 100%;
         height: 100vh;
         border-radius: 0;
     }
    
-    .headerPrimeiro span, .headerSegundo span{
+    .pag2headerPrimeiro span, .pag2headerSegundo span{
         font-size: 13px;
         width:100px;
     }
-    .entregaDivs{
+    .pag2entregaDivs{
         flex-wrap: wrap;
     }
-    .entregaDivs input{
+    .pag2entregaDivs input{
         width:100%;
         margin-left:0;
         margin-right: 0;
     }
-    .dadosCartao {
+    .pag2dadosCartao {
         margin-left:0;
         margin-right: 0;
         width: 100%;
     }
-}
-@media(max-width:375px) {
-    .headerPrimeiro span, .headerSegundo span{
-        font-size: 13px;
-        width:100px;
+    .pag2main {
+        padding: 5px 0 0 0;
     }
-    
 }
 
