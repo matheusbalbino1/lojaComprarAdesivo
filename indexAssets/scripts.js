@@ -27,7 +27,7 @@ elementosHtml.vue.botaoMenos.addEventListener("click", ()=>{somarDiminuir("vue",
 
 document.getElementsByClassName("botaoEnviar")[0]. addEventListener("click",()=>{
     event.preventDefault();
-    window.location.href = "./indexAssets/pagamentos.html";
+    window.location.href = "https://matheusbalbino1.github.io/lojaComprarAdesivo/indexAssets/pagamentos.html";
 })
 
 function total (){
