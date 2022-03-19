@@ -177,14 +177,25 @@ button:active {
         font-size: 13px;
         width:100px;
     }
+    .entregaDivs{
+        flex-wrap: wrap;
+    }
+    .entregaDivs input{
+        width:100%;
+        margin-left:0;
+        margin-right: 0;
+    }
+    .dadosCartao {
+        margin-left:0;
+        margin-right: 0;
+        width: 100%;
+    }
 }
 @media(max-width:375px) {
     .headerPrimeiro span, .headerSegundo span{
         font-size: 13px;
         width:100px;
     }
-    .entregaDivs{
-        flex-wrap: wrap;
-    }
+    
 }
 
