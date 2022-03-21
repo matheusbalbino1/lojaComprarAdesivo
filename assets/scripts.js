@@ -2,93 +2,123 @@
 
 let elementosHtml = {
     react: {
-        botaoMais: document.getElementById("botaoAumentarReact"),
-        botaoMenos: document.getElementById("botaoDiminuirReact"),
-        input: document.getElementById("inputReact")
+        botaoMais: pegarElementoId("botaoAumentarReact"),
+        botaoMenos: pegarElementoId("botaoDiminuirReact"),
+        input: pegarElementoId("inputReact")
     },
     vue: {
-        botaoMais: document.getElementById("botaoAumentarVue"),
-        botaoMenos: document.getElementById("botaoDiminuirVue"),
-        input: document.getElementById("inputVue")
+        botaoMais: pegarElementoId("botaoAumentarVue"),
+        botaoMenos: pegarElementoId("botaoDiminuirVue"),
+        input: pegarElementoId("inputVue")
     },
     angular: {
-        botaoMais: document.getElementById("botaoAumentarAngular"),
-        botaoMenos: document.getElementById("botaoDiminuirAngular"),
-        input: document.getElementById("inputAngular")
+        botaoMais: pegarElementoId("botaoAumentarAngular"),
+        botaoMenos: pegarElementoId("botaoDiminuirAngular"),
+        input: pegarElementoId("inputAngular")
     },
+
+    // Páginas do site
     mains: {
-        mainPrincipal: document.getElementsByClassName("landingMain")[0],
-        mainSecundario: document.getElementsByClassName("comprarMain")[0],
-        mainTerceario: document.getElementsByClassName("finalizarMain")[0]
+        mainPrincipal: pegarElementoClasse("landingMain")[0],
+        mainSecundario: pegarElementoClasse("comprarMain")[0],
+        mainTerceario: pegarElementoClasse("finalizarMain")[0]
     },
+
+    // Inputs da Entrega
     inputs: {
-        valorTotal: document.getElementById("valorTotal"),
-        estado: document.getElementsByClassName("input")[0],
-        cidade: document.getElementsByClassName("input")[1],
-        cep: document.getElementsByClassName("input")[2],
-        endereco: document.getElementsByClassName("input")[3],
-        numero: document.getElementsByClassName("input")[4],
-        email: document.getElementsByClassName("input")[5]
+        valorTotal: pegarElementoId("valorTotal"),
+        estado: pegarElementoClasse("input")[0],
+        cidade: pegarElementoClasse("input")[1],
+        cep: pegarElementoClasse("input")[2],
+        endereco: pegarElementoClasse("input")[3],
+        numero: pegarElementoClasse("input")[4],
+        email: pegarElementoClasse("input")[5]
     },
-    botaoImprimir: document.getElementById("botaoImprimir"),
-    botaoFinalizar: document.getElementById("botaoFinalizar"),
-    botaoLandingPage: document.getElementById("landingButton"),
-    botaoProximo: document.getElementById("botaoProximo"),
-    botaoVoltar: document.getElementById("botaoVoltar"),
-    botaoVoltarLanding: document.getElementById("botaoVoltarLanding"),
-    cartaoDeCredito: document.getElementsByClassName("inputRadio")[0],
-    boleto: document.getElementsByClassName("inputRadio")[1]
+    botaoImprimir: pegarElementoId("botaoImprimir"),
+    botaoFinalizar: pegarElementoId("botaoFinalizar"),
+    botaoLandingPage: pegarElementoId("landingButton"),
+    botaoProximo: pegarElementoId("botaoProximo"),
+    botaoVoltar: pegarElementoId("botaoVoltar"),
+    botaoVoltarLanding: pegarElementoId("botaoVoltarLanding"),
+    cartaoDeCredito: pegarElementoClasse("inputRadio")[0],
+    boleto: pegarElementoClasse("inputRadio")[1]
 }
 
-
+// botão Imprimir
 elementosHtml.botaoImprimir.addEventListener("click", pararEvento)
 
+// botão Finalizar
 elementosHtml.botaoFinalizar.addEventListener("click", finalizar)
 
+// botões de aumentar e diminuir REACT
 elementosHtml.react.botaoMais.addEventListener("click", () => { somarDiminuir("React", "+") })
 elementosHtml.react.botaoMenos.addEventListener("click", () => { somarDiminuir("React", "-") })
 
+// botões de aumentar e diminuir ANGULAR
 elementosHtml.angular.botaoMais.addEventListener("click", () => { somarDiminuir("Angular", "+") })
 elementosHtml.angular.botaoMenos.addEventListener("click", () => { somarDiminuir("Angular", "-") })
 
+// botões de aumentar e diminuir VUE
 elementosHtml.vue.botaoMais.addEventListener("click", () => { somarDiminuir("Vue", "+") })
 elementosHtml.vue.botaoMenos.addEventListener("click", () => { somarDiminuir("Vue", "-") })
 
+// Ir da LandingPage para a página de compras
 elementosHtml.botaoLandingPage.addEventListener("click", () => {
     event.preventDefault();
-    elementosHtml.mains.mainPrincipal.classList.add("esconder");
-    elementosHtml.mains.mainSecundario.classList.remove("esconder")
+    alterarPagina("mainPrincipal", "mainSecundario")
 })
 
+// Voltar da página de compras para a LandingPage
 elementosHtml.botaoVoltarLanding.addEventListener("click", () => {
     event.preventDefault();
-    elementosHtml.mains.mainSecundario.classList.add("esconder");
-    elementosHtml.mains.mainPrincipal.classList.remove("esconder")
+    alterarPagina("mainSecundario", "mainPrincipal")
 })
+
+// Ir da página de compras para a página "Finalizar"
 elementosHtml.botaoProximo.addEventListener("click", () => {
     event.preventDefault();
-    elementosHtml.mains.mainSecundario.classList.add("esconder");
-    elementosHtml.mains.mainTerceario.classList.remove("esconder")
+    alterarPagina("mainSecundario", "mainTerceario")
+
 })
+
+// Voltar da página "Finalizar" para a página de compras 
 elementosHtml.botaoVoltar.addEventListener("click", () => {
     event.preventDefault();
-    elementosHtml.mains.mainTerceario.classList.add("esconder");
-    elementosHtml.mains.mainSecundario.classList.remove("esconder")
+    alterarPagina("mainTerceario", "mainSecundario")
+
 })
 
+// Mudar página
+function alterarPagina(esconder, mostrar) {
+    elementosHtml.mains[esconder].classList.add("esconder");
+    elementosHtml.mains[mostrar].classList.remove("esconder");
+}
 
+function pegarElementoId(parametro) {
+    return document.getElementById(parametro)
+}
+function pegarElementoClasse(parametro) {
+    return document.getElementsByClassName(parametro)
+}
+
+// Mostrar o valor total nos Inputs
 function total() {
-    let total = document.getElementsByClassName("inputTotal")[0];
+    let total = pegarElementoClasse("inputTotal")[0];
     let react = elementosHtml.react.input.value;
     let vue = elementosHtml.vue.input.value;
     let angular = elementosHtml.angular.input.value;
+    //Valor total para a página de compras
     total.value = (eval(parseInt(react) * 9) + (parseInt(vue) * 8.50) + (parseInt(angular) * 6.20));
+
+    //Valor total para a página "finalizar"
     elementosHtml.inputs.valorTotal.value = total.value;
     return
 }
+
+// Mostrar a quantidade de itens selecionados
 function somarDiminuir(parametro, parametro2) {
     console.log("teste")
-    let atual = document.getElementById("input" + parametro);
+    let atual = pegarElementoId("input" + parametro);
     if (parametro2 == "-" && atual.value == 0) {
         return
     }
@@ -102,11 +132,14 @@ function pararEvento() {
     return
 }
 
+// Finalizar pedido e Enviar Email
 function finalizar() {
     event.preventDefault()
     sendEmail()
     return
 }
+
+// Enviar ao email o metodo de pagamento escolhido
 function metodoDePagamento() {
     if (elementosHtml.cartaoDeCredito.checked) {
         return "Cartão de Crédito"
