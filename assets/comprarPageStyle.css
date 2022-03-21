@@ -210,4 +210,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     .divBotoes{
         max-width:200px;
     }
+    .inputQuantidade{
+        width:90px;
+    }
 }
