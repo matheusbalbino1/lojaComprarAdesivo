@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.comprarMain {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.685)), url(backgroundLandingPage.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 5px;
+    z-index: 1;
+
+}
+
+.esconder {
+    display: none;
+}
+
+.header {
+    /* background: rgb(25, 25, 122); */
+    display: flex;
+    /* justify-content: center;
+    align-items: center;  */
+    box-shadow: 0px 0px 5px black;
+    height: 40px;
+    width: 100%;
+}
+
+.headerPrimeiro {
+    width: 50%;
+    height: 40px;
+    background: rgb(255, 145, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.spanHeaderComprar {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.spanHeaderPagar {
+    color: black;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.headerSegundo {
+    width: 50%;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+}
+
+.headerPonta {
+    height: 28px;
+    width: 28px;
+    transform: rotate(135deg);
+    background-image: linear-gradient(135deg, rgb(255, 145, 0) 50%, transparent 50%);
+    position: absolute;
+    right: -13px;
+    top: 6px;
+}
+
+.comprarArticle {
+    width: 100%;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.formH2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.formContainerAdesivos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formDivsAdesivos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 280px;
+    justify-content: space-around;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.678);
+    margin: 2rem 0;
+}
+
+.divBotoes {
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoesComprar {
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 145, 0);
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.botoesComprar:active {
+    transform: scale(0.9);
+}
+
+.inputQuantidade {
+    text-align: center;
+}
+
+.formDivTotal {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    margin: 2rem 0;
+}
+
+label.labelQuantia {
+    margin-right: 1rem;
+    font-size: 1.6rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.inputTotal {
+    height: 40px;
+    text-align: center;
+}
+
+.infoComprar {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.divObservacoes {
+    display: flex;
+    justify-content: end;
+    padding: 0 10px;
+    margin: 2rem 0;
+}
+
+.textarea {
+    width: 50%;
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    resize: none;
+}
+
+.divEnviar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.botaoEnviar {
+    background: rgb(255, 145, 0);
+    padding: .5rem 1rem;
+    box-sizing: content-box;
+    border: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.botaoEnviar:active {
+    transform: scale(0.9);
+}
+
+@media(max-width:850px) {
+    .formContainerAdesivos {
+        flex-direction: column;
+    }
+
+    .textarea {
+        width: 100%;
+    }
+}

@@ -5,155 +5,159 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="indexAssets/img/favicon-16x16.png" type="image/x-icon">
-    <link rel="stylesheet" href="indexAssets/style.css">
-    <link rel="stylesheet" href="indexAssets/pag2style.css">
-    <title>Comprar Adesivos</title>
+    <link rel="shortcut icon" href="assets/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/landingPageStyle.css">
+    <link rel="stylesheet" href="assets/comprarPageStyle.css">
+    <link rel="stylesheet" href="assets/finalizarPageStyle.css">
+    <title>Comprar Pacotes de Adesivos</title>
 </head>
 
 <body>
-    <main class="main ">
+    <main class="landingMain ">
+        <section class="landingSection">
+            <h1 class="landingH1">Pacotes<br>de<br>Adesivos</h1>
+            <button type="button" id="landingButton" class="landingButton">Comprar</button>
+        </section>
+    </main>
+    <main class="comprarMain  esconder">
         <header class="header">
-        <div class="headerPrimeiro">
-            <span>Comprar Pacotes</span>
-            <div class="headerPonta"></div>
-        </div>
-        <div class="headerSegundo">
-            <span>Pagamento</span>
-        </div>
-    </div>
+            <div class="headerPrimeiro">
+                <span class="spanHeaderComprar">Comprar </span>
+                <div class="headerPonta"></div>
+            </div>
+            <div class="headerSegundo">
+                <span class="spanHeaderPagar">Pagar</span>
+            </div>
+            </div>
         </header>
-        <article class="article">
-            <form action="" class="form">
-                <h2 class="formH2">Tipos de adesivos:</h2>
-                <div class="formAdesivos">
+        <article class="comprarArticle">
+            <form action="" class="">
+                <h2 class="formH2">Escolher Pacote de Adesivos</h2>
+                <div class="formContainerAdesivos">
                     <div class="formDivsAdesivos">
-                        <div class="formPreco">
-                            <span>React</span>
-                            <span><pre>       R$ 9,00</pre></span>
-                        </div>
+                        <div class="infoComprar">React</div>
+                        <div class="infoComprar">R$ 9,00</div>
                         <div class="divBotoes">
-                            <label class="labelQuantia">Qtd:</label>
-                            <button type="button" class="botaoQuantia botaoMais">+</button>
-                            <input type="number" name="" id="reactInput" placeholder="0" class="inputQuantia" value="0">
-                            <button type="button" class="botaoQuantia botaoMenos">-</button>
+                            <button type="button" id="botaoAumentarReact" class="botoesComprar">+</button>
+                            <input type="number" id="inputReact" placeholder="0" value="0" class="inputQuantidade">
+                            <button type="button" id="botaoDiminuirReact" class="botoesComprar">-</button>
                         </div>
+
                     </div>
+
                     <div class="formDivsAdesivos">
-                        <div class="formPreco">
-                        <span>Vue</span>
-                        <span><pre>           R$ 6,00</pre></span>
-                    </div>
+                        <div class="infoComprar">Vue</div>
+                        <div class="infoComprar">R$ 8,50</div>
                         <div class="divBotoes">
-                            <label class="labelQuantia">Qtd:</label>
-                            <button type="button" class="botaoQuantia botaoMais">+</button>
-                            <input type="number" id="vueInput" placeholder="0" class="inputQuantia" value="0">
-                            <button type="button" class="botaoQuantia botaoMenos">-</button>
+                            <button type="button" id="botaoAumentarVue" class="botoesComprar">+</button>
+                            <input type="number" id="inputVue" placeholder="0" value="0" class="inputQuantidade">
+                            <button type="button" id="botaoDiminuirVue" class="botoesComprar">-</button>
                         </div>
+
                     </div>
+
                     <div class="formDivsAdesivos">
-                        <div class="formPreco">
-                        <span>Angular</span>
-                        <span><pre>    R$ 5,55</pre></span>
-                    </div>
+                        <div class="infoComprar">Angular</div>
+                        <div class="infoComprar">R$ 6,20</div>
                         <div class="divBotoes">
-                            <label class="labelQuantia">Qtd:</label>
-                            <button type="button" class="botaoQuantia botaoMais">+</button>
-                            <input type="number" id="angularInput" placeholder="0" class="inputQuantia" value="0">
-                            <button type="button" class="botaoQuantia botaoMenos">-</button>
+                            <button type="button" id="botaoAumentarAngular" class="botoesComprar">+</button>
+                            <input type="number" id="inputAngular" placeholder="0" value="0" class="inputQuantidade">
+                            <button type="button" id="botaoDiminuirAngular" class="botoesComprar">-</button>
                         </div>
-                    </div>
-                    <div class="formDivTotal">
-                        <label class="labelQuantia">Total: R$</label>
-                        <input type="number" id="angularInput" placeholder="0" class="inputTotal" value="0">
+
                     </div>
                 </div>
+                <div class="formDivTotal">
+                    <label class="labelQuantia infoComprar">Total R$</label>
+                    <input type="number" id="inputTotal" placeholder="0" class="inputTotal" value="0">
                 </div>
                 <div class="divObservacoes">
-                    <label class="labelObservacoes">Observações:</label>
                     <textarea cols="30" rows="5" placeholder="Alguma dúvida ou recado?" class="textarea"></textarea>
                 </div>
                 <div class="divEnviar">
-                    <button class="botaoEnviar" type="submit">Próximo</button>
+                    <button class="botaoEnviar" id="botaoVoltarLanding" type="submit">Voltar</button>
+                    <button class="botaoEnviar" id="botaoProximo" type="submit">Próximo</button>
                 </div>
             </form>
         </article>
     </main>
-    <main class="pag2main esconder">
-        <header class="pag2header">
-            <div class="pag2headerPrimeiro">
-                <span>Comprar Pacotes</span>
-                <div class="pag2headerPonta"></div>
+    <main class="finalizarMain esconder">
+        <header class="finalizarHeader">
+            <div class="finalizarHeaderPrimeiro">
+                <span class="finalizarSpanHeaderComprar">Comprar </span>
+                <div class="finalizarHeaderPonta"></div>
             </div>
-            <div class="pag2headerSegundo">
-                <span>Pagamento</span>
+            <div class="finalizarHeaderSegundo">
+                <span class="finalizarSpanHeaderPagar">Pagar</span>
             </div>
             </div>
         </header>
-        <article class="pag2article">
+        <article class="finalizarArticle">
             <div>
-                <form method="POST">
-                    <div class="pag2entrega">
-                        <h2>DADOS DE ENTREGA</h2>
-                        <div class="pag2entregaDivs">
-                            <label for="">Estado:</label>
-                            <input class="input"type="text" placeholder="Ex: São Paulo">
+                <form method="POST" class="form">
+                    <div class="finalizarEntrega">
+                        <h2 class="entregaH2">DADOS DE ENTREGA</h2>
+                        <div class="finalizarEntregaDivs">
+                            <label class="labelEntrega">Estado:</label>
+                            <input class="input inputEntrega" type="text" placeholder="Ex: São Paulo">
                         </div>
-                        <div class="pag2entregaDivs">
-                            <label for="">Cidade:</label>
-                            <input class="input"type="text" placeholder="Ex: São Paulo">
+                        <div class="finalizarEntregaDivs">
+                            <label class="labelEntrega">Cidade:</label>
+                            <input class="input inputEntrega" type="text" placeholder="Ex: São Paulo">
                         </div>
-                        <div class="pag2entregaDivs">
-                            <label for="">CEP:</label>
-                            <input class="input"type="number" id="inputCep" placeholder="8 números sem traço">
+                        <div class="finalizarEntregaDivs">
+                            <label class="labelEntrega">CEP:</label>
+                            <input class="input inputEntrega" type="number" id="inputCep"
+                                placeholder="8 números sem traço">
                         </div>
-                        <div class="pag2entregaDivs">
-                            <div></div>
-                            <button type="button" id="botaoCep">Conferir CEP</button>
+                        <div class="finalizarEntregaDivs">
+                            <label class="labelEntrega">Endereço:</label>
+                            <input class="input inputEntrega" type="text" placeholder="Ex: Avenida Paulista">
                         </div>
-                        <div class="pag2entregaDivs">
-                            <label for="">Endereço:</label>
-                            <input class="input"type="text" placeholder="Ex: Avenida Paulista">
+                        <div class="finalizarEntregaDivs">
+                            <label class="labelEntrega">Número:</label>
+                            <input class="input inputEntrega" type="text" placeholder="Ex: 24B">
                         </div>
-                        <div class="pag2entregaDivs">
-                            <label for="">Número:</label>
-                            <input class="input" type="text" placeholder="Ex: 24B">
-                        </div>
-                        <div class="pag2entregaDivs">
-                            <label for="">Email:</label>
-                            <input class="input" type="text" placeholder="Seu melhor Email">
+                        <div class="finalizarEntregaDivs">
+                            <label class="labelEntrega">Email:</label>
+                            <input class="input inputEntrega" type="text" placeholder="Seu melhor Email">
                         </div>
                     </div>
-                    <div class="pag2pagamento">
-                        <h2>FORMAS DE PAGAMENTO</h2>
-                        <div class="pag2pagamentoCartaoCredito">
-                            <label class="pag2pagamentoLabel"><input type="radio" name="pagamento">Cartão de crédito</label>
-                            <div class="pag2divDadosCartao">
-                                <input type="number" placeholder="NÚMERO DO CARTÃO" class="pag2dadosCartao input">
-                                <input type="text" placeholder="NOME NO CARTÃO" class="pag2dadosCartao input">
-                                <input type="number" placeholder="CÓDIGO CCV" class="pag2dadosCartao input">
+                    <div class="finalizarPagamento">
+                        <h2 class="pagamentoH2">FORMAS DE PAGAMENTO</h2>
+                        <div class="finalizarPagamentoCartaoCredito">
+                            <label class="finalizarPagamentoLabel">
+                                <input type="radio" name="pagamento" class="inputRadio">Cartão de crédito
+                            </label>
+                            <div class="finalizarDivDadosCartao">
+                                <input type="number" placeholder="NÚMERO DO CARTÃO" class="finalizarDadosCartao">
+                                <input type="text" placeholder="NOME NO CARTÃO" class="finalizarDadosCartao">
+                                <input type="number" placeholder="CÓDIGO CCV" class="finalizarDadosCartao">
                             </div>
                         </div>
-                        <div class="pag2pagamentoBoleto">
-                            <label class="pag2pagamentoLabel"><input class="input" type="radio" name="pagamento">Boleto bancário</label>
-                            <div><button id="botaoImprimir">IMPRIMIR</button></div>
+                        <div class="finalizarPagamentoBoleto">
+                            <label class="finalizarPagamentoLabel">
+                                <input class="inputRadio" type="radio" name="pagamento">Boleto bancário
+                            </label>
+                            <div><button type="button" id="botaoImprimir">IMPRIMIR</button></div>
                         </div>
                     </div>
-                    <div class="pag2divFinalizar">
-                        <div class="pag2entregaDivs">
-                            <label for="">Valor Total  R$</label>
-                            <input class="input" id="valorTotal" type="text" placeholder="">
+                    <div class="divFinalizar">
+                        <div class="finalizarDivs">
+                            <span class="finalizarSpanValorTotal">Valor Total R$</span>
+                            <input class="input inputValorTotal" id="valorTotal" type="text" placeholder="">
                         </div>
-                        <button type="submit" id="botaoFinalizar">FINALIZAR</button>
                     </div>
                 </form>
+                <div class="divFinalizarBotoes">
+                    <button type="submit" id="botaoVoltar">VOLTAR</button>
+                    <button type="submit" id="botaoFinalizar">FINALIZAR</button>
+                </div>
             </div>
         </article>
     </main>
-    <script src="indexAssets/scripts.js"></script>
-    <script src=
-    "https://smtpjs.com/v3/smtp.js">
-  </script>
+    <script src="assets/scripts.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
